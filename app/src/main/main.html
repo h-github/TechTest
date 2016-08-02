@@ -1,0 +1,26 @@
+<md-content layout-fill layout-padding layout="column">
+    <md-toolbar class="md-table-toolbar md-primary ">
+        <div class="md-toolbar-tools ">
+            <a href="http://marvel.com/ " target="_blank "><h1>Marvel</h1></a>
+        </div>
+    </md-toolbar>
+    <md-content flex layout-padding layout="column ">
+        <md-content id="comic_detail" flex="70">
+            <div layout-fill class="view-animate-container">
+                <div ui-view layout-fill class="view-animate"></div>
+            </div>
+        </md-content>
+        <md-content flex="30 " class="vrepeatContainer " ng-cloak>
+            <md-content layout="column ">
+                <md-virtual-repeat-container id="horizontal-container " md-orient-horizontal>
+                    <div md-virtual-repeat="comic in vm.marvelComicsResolve " class="repeated-item" flex ui-sref-active="active">
+                        <a ui-sref="comic({id: comic.id, imageLink: vm.imageLink(comic, 4)})">
+                            <img src="{{vm.imageLink(comic, 3)}} " alt="{{comic.title}}">
+                        </a>
+                        <!--<span>{{comic.title}}</span>-->
+                    </div>
+                </md-virtual-repeat-container>
+            </md-content>
+        </md-content>
+    </md-content>
+</md-content>

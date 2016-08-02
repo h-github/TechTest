@@ -1,0 +1,85 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+html, body{
+    font-family: Oswald!important;
+}
+.md-virtual-repeat-container {
+    height: 240px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.md-virtual-repeat-container .repeated-item {
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 220px;
+    padding-top: 35px;
+    text-align: center;
+    width: 150px;
+    background-color: rgb(55, 71, 79);
+}
+
+
+/*.md-virtual-repeat-container md-content {
+    margin: 16px;
+}*/
+
+.md-virtual-repeat-container md-virtual-repeat-container {
+    border: solid 1px grey;
+}
+
+.view-animate-container {
+    position: relative;
+    height: 100px!important;
+    background: white;
+    border: 1px solid black;
+    height: 40px;
+    overflow: hidden;
+}
+
+.view-animate {
+    padding: 10px;
+}
+
+.view-animate.ng-enter,
+.view-animate.ng-leave {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.5s;
+    display: block;
+    width: 100%;
+    border-left: 1px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.view-animate.ng-enter {
+    left: 100%;
+}
+
+.view-animate.ng-enter.ng-enter-active {
+    left: 0;
+}
+
+.view-animate.ng-leave.ng-leave-active {
+    left: -100%;
+}
+
+#comic_detail {
+    overflow: hidden!important;
+}
+
+ul.ul_creator{
+    text-decoration: none;
+    list-style: none;
+}

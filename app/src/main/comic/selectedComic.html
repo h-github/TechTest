@@ -1,0 +1,43 @@
+<md-content layout-fill layout="row">
+    <md-content flex="30" layout-padding class="md-primary" layout-align="center center">
+        <a href="{{vm.url}}" target="_blank"> <img src="{{vm.imageLink}}" alt="{{vm.comic.title}} "></a>
+    </md-content>
+    <md-content  layout-fill flex="70" layout="column" layout-align="start start">
+        <h2>
+          <span>{{vm.comic.title}}</span>
+        </h2>
+        <md-content flex="70" layout="row" layout-align="start start">
+            <md-card layout-fill flex layout-padding ng-if="vm.creators.length > 0">
+                <md-toolbar class="md-table-toolbar md-default">
+                    <div class="md-toolbar-tools">
+                        <span>Creators</span>
+                    </div>
+                </md-toolbar>
+                <md-table-container>
+                    <table md-table>
+                        <thead md-head md-order="query.order">
+                            <tr md-row>
+                                <th md-column md-order-by="name"><span>Name</span></th>
+                                <th md-column><span>Role</span></th>
+                            </tr>
+                        </thead>
+                        <tbody md-body>
+                            <tr md-row ng-repeat="creator in vm.creators">
+                                <td md-cell>{{creator.name}}</td>
+                                <td md-cell>{{creator.role}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </md-table-container>
+            </md-card>
+            <md-card layout-padding layout-margin layout-fill flex ng-if="vm.description && vm.description !== ''" >
+                <md-toolbar class="md-table-toolbar md-default">
+                    <div class="md-toolbar-tools">
+                        <span>Description</span>
+                    </div>
+                </md-toolbar>
+                <p>{{vm.description}}</p>
+            </md-card>
+        </md-content>
+    </md-content>
+</md-content>
