@@ -40,7 +40,7 @@
                 controllerAs: 'vm'
             })
             .state('comic', {
-                url: '/comic/{id}/detail/{imageLink}',
+                url: 'comic/{id}/detail/{imageLink}',
                 parent: 'index',
                 templateUrl: 'app/src/main/comic/selectedComic.html',
                 controller: 'SelectComicCtrl',
